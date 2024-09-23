@@ -7,6 +7,9 @@ ent-AdjutantPDA = КПК адъютанта
 ent-AdjutantIDCard = ID карта адъютанта
     .desc = На самом деле эта обычная серая айди-карта, закрашенная серебристой краской.
 
+ent-ClothingHeadsetAdjutant = гарнитура Адъютанта
+    .desc = Микрофон выглядит погрызанным...
+
 job-name-adjutant = Адъютант
 job-description-adjutant = Постигните все тонкости управления!
 job-supervisors-command = всему командному составу
