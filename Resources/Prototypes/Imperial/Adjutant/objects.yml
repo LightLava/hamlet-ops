@@ -50,3 +50,15 @@
     layers:
       - state: green
       - state: adjutant-icon
+
+- type: entity
+  parent: ClothingHeadsetCommand
+  id: ClothingHeadsetAdjutant
+  name: adjutant headset
+  description: A headset used by adjutant.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon
