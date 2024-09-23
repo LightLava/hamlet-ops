@@ -15,12 +15,8 @@
   playTimeTracker: JobAdjutant
   psychosisGainResist: 0.4 # psychosis
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 54000 #15 hrs
-      inverted: true
     - !type:OverallPlaytimeRequirement
-      time: 36000 #Imperial role timers
+      time: 36000 # Щитократия решила что сегодня без таймлока...
   weight: 5
   startingGear: AdjutantGear
   icon: "JobIconAdjutant"
@@ -30,6 +26,7 @@
   access:
   - Command
   - Maintenance
+  - Service
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -45,7 +42,7 @@
     shoes: ClothingShoesBootsLaceup
     id: AdjutantPDA
     gloves: ClothingHandsGlovesHop
-    ears: ClothingHeadsetAltCommand
+    ears: ClothingHeadsetAdjutant
     belt: BoxFolderClipboard
   innerClothingSkirt: ClothingUniformJumpsuitAdjutant
   satchel: ClothingBackpackSatchelHOPFilled
