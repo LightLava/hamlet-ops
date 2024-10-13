@@ -16,11 +16,11 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 7.5
+        maxVol: 5
   - type: Hypospray
     canPenetrate: false
     solutionName: pen
-    transferAmount: 7.5
+    transferAmount: 5
   - type: RefillableSolution
     solution: pen
   - type: UseDelay
@@ -34,11 +34,11 @@
   components:
   - type: Hypospray
     solutionName: pen
-    transferAmount: 15
+    transferAmount: 10
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 15
+        maxVol: 10
 
 - type: latheRecipe
   id: SmallPrototypeChemicalMedipen
