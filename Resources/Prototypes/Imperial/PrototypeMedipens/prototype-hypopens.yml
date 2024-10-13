@@ -1,0 +1,73 @@
+- type: entity
+  name: small prototype medipen
+  parent: BaseItem
+  description: A sterile injector for rapid administration of drugs to patients. Now can be refilled!
+  id: SmallPrototypeChemicalMedipen
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 7.5
+  - type: Hypospray
+    canPenetrate: false
+    solutionName: pen
+    transferAmount: 7.5
+  - type: RefillableSolution
+    solution: pen
+  - type: UseDelay
+    delay: 7.5
+
+- type: entity
+  name: extra spaced prototype medipen
+  parent: SmallPrototypeChemicalMedipen
+  description: A sterile injector for rapid administration of drugs to patients with extra space for chemicals. Now can be refilled!
+  id: NormalPrototypeChemicalMedipen
+  components:
+  - type: Hypospray
+    solutionName: pen
+    transferAmount: 15
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+
+- type: latheRecipe
+  id: SmallPrototypeChemicalMedipen
+  result: SmallPrototypeChemicalMedipen
+  category: Tools
+  completetime: 5
+  materials:
+    Steel: 500
+    Plastic: 750
+
+- type: latheRecipe
+  id: NormalPrototypeChemicalMedipen
+  result: NormalPrototypeChemicalMedipen
+  category: Tools
+  completetime: 5
+  materials:
+    Steel: 750
+    Plastic: 1000
+    Silver: 200
+
+- type: technology
+  id: PrototypeMedipens
+  name: research-technology-prototypes-medipens
+  icon:
+    sprite: Objects/Specific/Medical/medipen.rsi
+    state: medipen
+  discipline: CivilianServices
+  tier: 2
+  cost: 7500
+  recipeUnlocks:
+  - SmallPrototypeChemicalMedipen
+  - NormalPrototypeChemicalMedipen
