@@ -850,6 +850,8 @@
       - BluespaceBeaker
       - SyringeBluespace
       - SyringeCryostasis
+      - SmallPrototypeChemicalMedipen ### Imperial craftable medipens
+      - NormalPrototypeChemicalMedipen ### Imperial craftable medipens
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
