@@ -22,5 +22,8 @@ public sealed partial class ThiefUndeterminedBackpackComponent : Component
     public List<int> SelectedSets = new();
 
     [DataField]
+    public int maxSelectedSets; // Imperial MaximumSets
+
+    [DataField]
     public SoundSpecifier ApproveSound = new SoundPathSpecifier("/Audio/Effects/rustle1.ogg");
 }

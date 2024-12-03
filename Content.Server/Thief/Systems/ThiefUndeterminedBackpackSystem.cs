@@ -18,7 +18,7 @@ public sealed class ThiefUndeterminedBackpackSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
 
-    private const int MaxSelectedSets = 2;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -35,7 +35,7 @@ public sealed class ThiefUndeterminedBackpackSystem : EntitySystem
 
     private void OnApprove(Entity<ThiefUndeterminedBackpackComponent> backpack, ref ThiefBackpackApproveMessage args)
     {
-        if (backpack.Comp.SelectedSets.Count != MaxSelectedSets)
+        if (backpack.Comp.SelectedSets.Count != backpack.Comp.maxSelectedSets)
             return;
 
         foreach (var i in backpack.Comp.SelectedSets)
@@ -79,6 +79,6 @@ public sealed class ThiefUndeterminedBackpackSystem : EntitySystem
             data.Add(i, info);
         }
 
-        _ui.TrySetUiState(uid, ThiefBackpackUIKey.Key, new ThiefBackpackBoundUserInterfaceState(data, MaxSelectedSets));
+        _ui.TrySetUiState(uid, ThiefBackpackUIKey.Key, new ThiefBackpackBoundUserInterfaceState(data, component.maxSelectedSets));
     }
 }
