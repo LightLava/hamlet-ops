@@ -155,6 +155,7 @@
     state: icon
   - type: ThiefUndeterminedBackpack
     transformAfterSelect: AlwaysPoweredWallLight
+    maxSelectedSets: 2 # Imperial Max Sets
     possibleSets:
     # - TO DO Thief pinpointer needed
     - ChemistrySet
